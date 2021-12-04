@@ -12,7 +12,16 @@
     <list default="true" id="e267c14b-1b06-4dc9-a8aa-737fca788b6b" name="Changes" comment="тестов добавил">
       <change afterPath="$PROJECT_DIR$/../$RECYCLE.BIN/S-1-5-21-3256970141-469078096-368433956-1001/$I763CRV.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../$RECYCLE.BIN/S-1-5-21-3256970141-469078096-368433956-1001/$IIFUI6J.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../$RECYCLE.BIN/S-1-5-21-3256970141-469078096-368433956-1001/$IY9U0BR.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../$RECYCLE.BIN/S-1-5-21-3256970141-469078096-368433956-1001/$IYC8SME.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../$RECYCLE.BIN/S-1-5-21-3256970141-469078096-368433956-1001/$IYTILWP.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../$RECYCLE.BIN/S-1-5-21-3256970141-469078096-368433956-1001/$R8HVOE6.idea/newProj.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../$RECYCLE.BIN/S-1-5-21-3256970141-469078096-368433956-1001/$RMSUY7H/production/Snake/main/main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../$RECYCLE.BIN/S-1-5-21-3256970141-469078096-368433956-1001/$RMSUY7H/production/Snake/test/test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../$RECYCLE.BIN/S-1-5-21-3256970141-469078096-368433956-1001/$RNORUXH/main/main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../$RECYCLE.BIN/S-1-5-21-3256970141-469078096-368433956-1001/$RNORUXH/test/test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../$RECYCLE.BIN/S-1-5-21-3256970141-469078096-368433956-1001/$RY9U0BR.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../$RECYCLE.BIN/S-1-5-21-3256970141-469078096-368433956-1001/$RYC8SME.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Java/Java.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Java/out/production/Java/com.company/.idea/com.company.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Java/out/production/Java/com/com.iml" afterDir="false" />
@@ -20,16 +29,29 @@
       <change afterPath="$PROJECT_DIR$/../Java3/Java3.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../JavaProject/.idea/JavaProject.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../JavaProject/untitled/untitled.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/AppleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/FieldTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/MenuTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/SnakeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/AppleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/FieldTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/MenuTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/SnakeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_dlsc_formsfx_formsfx_core_11_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__eu_hansolo_tilesfx_11_48.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_synedra_validatorfx_0_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_controlsfx_controlsfx_11_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_kordamp_bootstrapfx_bootstrapfx_core_0_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_kordamp_ikonli_ikonli_core_12_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_kordamp_ikonli_ikonli_javafx_12_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_media_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_media_win_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_web_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_web_win_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/company/Apple.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/company/Field.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/company/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/company/Snake.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Task-Manger-Application/Task-Manger-Application-master.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Task-Manger-Application/TodoApp.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../add/.idea/add.iml" afterDir="false" />
@@ -37,11 +59,49 @@
       <change afterPath="$PROJECT_DIR$/../addProgram/untitled/untitled.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../beta/Task Manager.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../beta2/Task Manager.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chess/chess.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../com.company/com.company.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../project1/project1.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../studying/studying.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../untitled/untitled.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../untitled1/untitled1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled2/untitled2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Snake.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Snake.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/company/Apple.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/company/Field.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/company/Menu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/company/Snake.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco.exec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/default/Apple.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/default/Apple.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/default/Field$KeyBoard.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/default/Field$KeyBoard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/default/Field.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/default/Field.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/default/Menu$ButtonEvent.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/default/Menu$ButtonEvent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/default/Menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/default/Menu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/default/Snake.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/default/Snake.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/default/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/default/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/default/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/default/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2021-12-04T21-39-16_232.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2021-12-04T21-39-17_723.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/AppleTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/AppleTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/FieldTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/FieldTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/MenuTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/MenuTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/SnakeTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/SnakeTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-AppleTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-AppleTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-FieldTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-FieldTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-MenuTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-MenuTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-SnakeTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-SnakeTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/AppleTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/AppleTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/FieldTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/FieldTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/MenuTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MenuTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/SnakeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/SnakeTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../java100/src/main/java/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java100/src/main/java/company/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../java100/target/classes/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../java100/target/classes/company/Main.class" afterDir="false" />
     </list>
@@ -59,7 +119,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -85,6 +145,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -110,6 +171,8 @@
   </component>
   <component name="RunManager" selected="Application.Field">
     <configuration name="Field" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Field" />
       <module name="Snake" />
       <method v="2">
