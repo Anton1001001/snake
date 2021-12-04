@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: FieldTest
 -------------------------------------------------------------------------------
-Tests run: 27, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.514 s - in FieldTest
+Tests run: 27, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.465 s - in FieldTest
