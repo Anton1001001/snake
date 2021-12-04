@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>main.java</groupId>
+    <groupId>org.uni</groupId>
     <artifactId>Maven_coverage</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>Maven_coverage</name>
@@ -15,8 +15,8 @@
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
         <!-- Sonar -->
-        <sonar.organization>anton1001001</sonar.organization>
-        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+          <sonar.organization>anton1001001</sonar.organization>
+          <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
         <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
         <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
