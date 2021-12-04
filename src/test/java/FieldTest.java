@@ -1,3 +1,7 @@
+import company.Apple;
+import company.Field;
+import company.Menu;
+import company.Snake;
 import org.junit.jupiter.api.*;
 
 
@@ -126,5 +130,4 @@ class FieldTest {
 
 
 }
-
 

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Menu.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Snake</a> &gt; <a href="index.source.html" class="el_package">company</a> &gt; <span class="el_source">Menu.java</span></div><h1>Menu.java</h1><pre class="source lang-java linenums">package company;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+/** class of menu */
+public class Menu extends JFrame{
+    /** title of button */
+<span class="fc" id="L9">    public  static final JRadioButton radio1 = new JRadioButton(&quot;Большое&quot;);</span>
+    /** title of button */
+<span class="fc" id="L11">    public static final JRadioButton radio2 = new JRadioButton(&quot;Среднее&quot;);</span>
+    /** title of button */
+<span class="fc" id="L13">    public static final JRadioButton radio3 = new JRadioButton(&quot;Маленькое&quot;);</span>
+    /** title of button */
+<span class="fc" id="L15">    public static final JRadioButton radio1_obj = new JRadioButton(&quot;Нет&quot;);</span>
+    /** title of button */
+<span class="fc" id="L17">    public static final JRadioButton radio2_obj = new JRadioButton(&quot;Мало&quot;);</span>
+    /** title of button */
+<span class="fc" id="L19">    public static final JRadioButton radio3_obj = new JRadioButton(&quot;Средне&quot;);</span>
+    /** title of button */
+<span class="fc" id="L21">    public static final JRadioButton radio4_obj = new JRadioButton(&quot;Много&quot;);</span>
+
+    /**
+     * create of menu
+     */
+    //создание меню настроек змеи
+    public Menu(){
+<span class="fc" id="L28">        super(&quot;Options&quot;);</span>
+<span class="fc" id="L29">        this.setSize(Field.SCALE*20, Field.SCALE*20);</span>
+<span class="fc" id="L30">        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span>
+
+<span class="fc" id="L32">        Container container = this.getContentPane();</span>
+<span class="fc" id="L33">        container.setLayout(new GridLayout(11,1,2,3));</span>
+
+<span class="fc" id="L35">        JLabel label = new JLabel(&quot;Выберите размер поля&quot;);</span>
+<span class="fc" id="L36">        container.add(label);</span>
+
+<span class="fc" id="L38">        ButtonGroup group = new ButtonGroup();</span>
+<span class="fc" id="L39">        group.add(radio1);</span>
+<span class="fc" id="L40">        group.add(radio2);</span>
+<span class="fc" id="L41">        group.add(radio3);</span>
+
+<span class="fc" id="L43">        container.add(radio1);</span>
+<span class="fc" id="L44">        radio1.setSelected(true);</span>
+<span class="fc" id="L45">        container.add(radio2);</span>
+<span class="fc" id="L46">        container.add(radio3);</span>
+
+<span class="fc" id="L48">        JLabel label_obj = new JLabel(&quot;Выберите количество препятствий&quot;);</span>
+<span class="fc" id="L49">        container.add(label_obj);</span>
+
+<span class="fc" id="L51">        ButtonGroup group_obj = new ButtonGroup();</span>
+<span class="fc" id="L52">        group_obj.add(radio1_obj);</span>
+<span class="fc" id="L53">        group_obj.add(radio2_obj);</span>
+<span class="fc" id="L54">        group_obj.add(radio3_obj);</span>
+<span class="fc" id="L55">        group_obj.add(radio4_obj);</span>
+
+<span class="fc" id="L57">        container.add(radio1_obj);</span>
+<span class="fc" id="L58">        radio1_obj.setSelected(true);</span>
+<span class="fc" id="L59">        container.add(radio2_obj);</span>
+<span class="fc" id="L60">        container.add(radio3_obj);</span>
+<span class="fc" id="L61">        container.add(radio4_obj);</span>
+
+<span class="fc" id="L63">        JButton button = new JButton(&quot;START&quot;);</span>
+<span class="fc" id="L64">        button.addActionListener(new ButtonEvent());</span>
+<span class="fc" id="L65">        container.add(button);</span>
+<span class="fc" id="L66">    }</span>
+
+    /**
+     * create the field within menu settings
+     */
+    public static void create_field(){
+        //настройка окна вывод
+<span class="fc" id="L73">        Field.jFrame = new JFrame(&quot;Snake&quot;);</span>
+<span class="fc" id="L74">        Field.jFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);</span>
+<span class="fc" id="L75">        Field.jFrame.setLocation(0,0);</span>
+<span class="fc" id="L76">        Field.jFrame.setResizable(false);</span>
+<span class="fc" id="L77">        Field.jFrame.setSize(Field.razmer+16,Field.razmer+38);</span>
+<span class="fc" id="L78">        Field.jFrame.add(new Field());</span>
+<span class="fc" id="L79">        Field.jFrame.setVisible(true);</span>
+
+<span class="fc" id="L81">    }</span>
+
+    /**
+     * install settings
+     */
+    public static void radio_choose(){
+<span class="fc bfc" id="L87" title="All 2 branches covered.">        if(radio1.isSelected()) {</span>
+<span class="fc" id="L88">            Field.razmer = Field.SCALE*20;</span>
+<span class="pc bpc" id="L89" title="1 of 2 branches missed.">            if(radio1_obj.isSelected()) Field.col=0;//0%</span>
+<span class="pc bpc" id="L90" title="1 of 2 branches missed.">            if(radio2_obj.isSelected()) Field.col=12;//3%</span>
+<span class="pc bpc" id="L91" title="1 of 2 branches missed.">            if(radio3_obj.isSelected()) Field.col=28;//7%</span>
+<span class="pc bpc" id="L92" title="1 of 2 branches missed.">            if(radio4_obj.isSelected()) Field.col=40;//10%</span>
+        }
+<span class="fc bfc" id="L94" title="All 2 branches covered.">        if(radio2.isSelected()) {</span>
+<span class="fc" id="L95">            Field.razmer = Field.SCALE*15;</span>
+<span class="pc bpc" id="L96" title="1 of 2 branches missed.">            if(radio1_obj.isSelected()) Field.col=0;</span>
+<span class="pc bpc" id="L97" title="1 of 2 branches missed.">            if(radio2_obj.isSelected()) Field.col=7;</span>
+<span class="pc bpc" id="L98" title="1 of 2 branches missed.">            if(radio3_obj.isSelected()) Field.col=16;</span>
+<span class="pc bpc" id="L99" title="1 of 2 branches missed.">            if(radio4_obj.isSelected()) Field.col=23;</span>
+        }
+<span class="fc bfc" id="L101" title="All 2 branches covered.">        if(radio3.isSelected()) {</span>
+<span class="fc" id="L102">            Field.razmer = Field.SCALE*10;</span>
+<span class="pc bpc" id="L103" title="1 of 2 branches missed.">            if(radio1_obj.isSelected()) Field.col=0;</span>
+<span class="pc bpc" id="L104" title="1 of 2 branches missed.">            if(radio2_obj.isSelected()) Field.col=3;</span>
+<span class="pc bpc" id="L105" title="1 of 2 branches missed.">            if(radio3_obj.isSelected()) Field.col=7;</span>
+<span class="pc bpc" id="L106" title="1 of 2 branches missed.">            if(radio4_obj.isSelected()) Field.col=10;</span>
+        }
+
+<span class="fc" id="L109">    }</span>
+    /*** create barriers*/
+    public static void create_objects(){
+<span class="fc" id="L112">        Field.objx= new int[Field.col];</span>
+<span class="fc" id="L113">        Field.objy= new int[Field.col];</span>
+
+        //генерация координат препятствий
+<span class="fc bfc" id="L116" title="All 2 branches covered.">        for (int i=0; i&lt; Field.col;i++) {</span>
+<span class="fc" id="L117">            Field.objx[i] = Math.abs( (int) (Math.random()*(Field.razmer/Field.SCALE)-1));</span>
+<span class="fc" id="L118">            Field.objy[i] = Math.abs( (int) (Math.random()*(Field.razmer/Field.SCALE)-1));</span>
+
+            //проверка на спаун перед головой змеи
+<span class="fc bfc" id="L121" title="All 12 branches covered.">            if(((Field.objx[i]== (Field.razmer/Field.SCALE)/2 + 1 ) &amp;&amp; (Field.objy[i]== (Field.razmer/Field.SCALE)/2 - 1)) ||</span>
+                    ((Field.objx[i]== (Field.razmer/Field.SCALE)/2  ) &amp;&amp; (Field.objy[i]== (Field.razmer/Field.SCALE)/2 - 1)) ||
+                    ((Field.objx[i]== (Field.razmer/Field.SCALE)/2 - 1 ) &amp;&amp; (Field.objy[i]== (Field.razmer/Field.SCALE)/2 - 1)))
+            {
+<span class="fc" id="L125">                Field.objx[i] = Math.abs( (int) (Math.random()*(Field.razmer/Field.SCALE)-1)); Field.objy[i] = Math.abs( (int) (Math.random()*(Field.razmer/Field.SCALE)-1));</span>
+            }
+        }
+<span class="fc" id="L128">    }</span>
+    /*** assigning variables according to the specified settings*/
+    //задание переменных по данным настройкам
+<span class="fc" id="L131">    class ButtonEvent implements ActionListener{</span>
+        public void actionPerformed(ActionEvent e){
+<span class="nc" id="L133">            dispose(); radio_choose(); create_objects(); create_field();</span>
+<span class="nc" id="L134">        }</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

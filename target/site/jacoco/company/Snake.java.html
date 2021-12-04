@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Snake.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Snake</a> &gt; <a href="index.source.html" class="el_package">company</a> &gt; <span class="el_source">Snake.java</span></div><h1>Snake.java</h1><pre class="source lang-java linenums">package company;
+
+/**
+ * class of snake
+ */
+public class Snake {
+
+    /** initial length */
+<span class="fc" id="L9">    public int len = 2;                        //начальная длинна</span>
+    /** initial direction */
+<span class="fc" id="L11">    public int direction = 1 ;                 //начальное направление</span>
+    /** coordinate X of snake body */
+<span class="fc" id="L13">    public  int[] sX= new int[Field.razmer];   //координаты тела змеи по х</span>
+    /** coordinate Y of snake body */
+<span class="fc" id="L15">    public  int[] sY = new int[Field.razmer];  //координаты тела змеи по у</span>
+
+    /**
+     * @param x1 coordinate X of snake head
+     * @param y1 coordinate Y of snake head
+     * @param x2 coordinate X of the second scale of snake
+     * @param y2 coordinate Y of the second scale of snake
+     */
+    //координаты головыя змеи
+<span class="fc" id="L24">    public Snake(int x1, int y1, int x2, int y2){</span>
+<span class="fc" id="L25">        sX[0]=x1;</span>
+<span class="fc" id="L26">        sX[1]=x2;</span>
+<span class="fc" id="L27">        sY[0]=y1;</span>
+<span class="fc" id="L28">        sY[1]=y2;</span>
+<span class="fc" id="L29">    }</span>
+
+    /**
+     * moving of the snake to the wall
+     * @param sY coordinate of snake in Oy
+     * @param sX coordinate of snake in Ox
+     */
+    public static void move_in_wall(int[] sY, int[] sX){
+        //змея переползает с одной части экрана в другую
+<span class="pc bpc" id="L38" title="1 of 2 branches missed.">        if(sY[0]&gt;Field.razmer/Field.SCALE-1) sY[0]=0;</span>
+<span class="fc bfc" id="L39" title="All 2 branches covered.">        if(sY[0]&lt;0) sY[0]=Field.razmer/Field.SCALE-1;</span>
+<span class="pc bpc" id="L40" title="1 of 2 branches missed.">        if(sX[0]&gt;Field.razmer/Field.SCALE-1)  sX[0]=0;</span>
+<span class="fc bfc" id="L41" title="All 2 branches covered.">        if(sX[0]&lt;0) sX[0]=Field.razmer/Field.SCALE-1;</span>
+<span class="fc" id="L42">    }</span>
+
+
+    /**
+     * move of snake
+     */
+    //движение змеи
+    public  void move(){
+<span class="fc bfc" id="L50" title="All 2 branches covered.">        for(int l = len; l &gt; 0; l--){</span>
+<span class="fc" id="L51">            sX[l] = sX[l-1];</span>
+<span class="fc" id="L52">            sY[l] = sY[l-1];</span>
+        }
+        //up
+<span class="pc bpc" id="L55" title="1 of 2 branches missed.">        if(direction == 0) sY[0]--;</span>
+        //down
+<span class="pc bpc" id="L57" title="1 of 2 branches missed.">        if(direction == 2) sY[0]++;</span>
+        //right
+<span class="pc bpc" id="L59" title="1 of 2 branches missed.">        if(direction == 1) sX[0]++;</span>
+        //left
+<span class="pc bpc" id="L61" title="1 of 2 branches missed.">        if(direction == 3) sX[0]--;</span>
+<span class="fc" id="L62">        move_in_wall(sY, sX);</span>
+
+
+<span class="fc" id="L65">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

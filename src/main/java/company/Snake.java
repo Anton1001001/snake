@@ -1,3 +1,5 @@
+package company;
+
 /**
  * class of snake
  */

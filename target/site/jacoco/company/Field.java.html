@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Field.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Snake</a> &gt; <a href="index.source.html" class="el_package">company</a> &gt; <span class="el_source">Field.java</span></div><h1>Field.java</h1><pre class="source lang-java linenums">package company;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+
+/**
+ *  main class
+ */
+public class Field extends JPanel implements ActionListener {
+    /** Frame */
+    public static JFrame jFrame;                 //создание окна вывода
+    /** size of scale */
+    public static final int SCALE =32;           //размер клетки
+    /** number of object */
+    public static int col;                       //количество препятствий
+    /** size of field */
+    public static int razmer;                    //размер поля
+    /** speed of snake */
+<span class="fc" id="L23">    public static int speed=6;                   //скорость игры</span>
+    /** parameter of game */
+<span class="fc" id="L25">    public static boolean T=false;                      //игра на паузе или нет</span>
+    /** parameter of game over */
+<span class="fc" id="L27">    public  boolean score_and_game_over = false;</span>
+    /** score of game */
+<span class="fc" id="L29">    public static int score=0;                   //счет за игру</span>
+    /** coordinate X of object */
+    public static int[] objx;                    //кординаты препятствий по х
+    /** coordinate Y of object */
+    public static int[] objy;                    //координаты пряпятствий по у
+    /** title */
+<span class="fc" id="L35">    public static String game_over = &quot;GAME OVER (T-T)//&quot;;</span>
+
+    /** create snake on field */
+    //задаем Змея
+<span class="fc" id="L39">    Snake s = new Snake ((razmer/SCALE)/2,(razmer/SCALE)/2-1, (razmer/SCALE)/2-1, (razmer/SCALE)/2-1);</span>
+
+    /** create apple on field */
+    //задаем яблоко
+<span class="fc" id="L43">    Apple a = new Apple  (Math.abs( (int) (Math.random()*(Field.razmer/Field.SCALE)-1)),Math.abs( (int) (Math.random()*(Field.razmer/Field.SCALE)-1)));</span>
+
+    /** create timer of work */
+    //Ввод таймера для движ змеи
+<span class="fc" id="L47">    Timer timer = new Timer(1000/speed, this);</span>
+
+    /**
+     * add keyboard and timer
+     */
+    //подрубаем клаву и таймер
+<span class="fc" id="L53">    public Field(){</span>
+<span class="fc" id="L54">    timer.start();</span>
+<span class="fc" id="L55">    addKeyListener(new KeyBoard());</span>
+<span class="fc" id="L56">    setFocusable(true);</span>
+<span class="fc" id="L57">    }</span>
+
+    /**
+     * field rendering
+     * @param g graphics variable
+     */
+    //отрисовка поля
+    @Override
+    public void paint(Graphics g){
+
+        //черный экран
+<span class="fc" id="L68">        g.setColor(Color.black);</span>
+<span class="fc" id="L69">        g.fillRect(0,0, razmer+16, razmer+38);</span>
+
+        //отрисовка яблок
+<span class="fc" id="L72">        g.setColor(Color.red);</span>
+<span class="fc" id="L73">        g.fillOval(a.posX*SCALE+5,a.posY*SCALE+4, SCALE-8, SCALE-8);</span>
+
+        //отрисовка препятствий на поле
+<span class="fc" id="L76">        g.setColor(Color.gray);</span>
+<span class="pc bpc" id="L77" title="1 of 2 branches missed.">        for (int i=0; i&lt; col;i++) {</span>
+<span class="nc" id="L78">            g.fillRect(objx[i]*SCALE+4,objy[i]*SCALE+3,SCALE-6,SCALE-6);</span>
+        }
+
+        //отрисовка змея
+<span class="fc bfc" id="L82" title="All 2 branches covered.">        for (int l=1; l&lt;s.len; l++){</span>
+<span class="fc" id="L83">            g.setColor(Color.green);</span>
+<span class="fc" id="L84">            g.fillRect(s.sX[l]*SCALE+4, s.sY[l]*SCALE+3, SCALE-6, SCALE-6);</span>
+<span class="fc" id="L85">            g.setColor(Color.white);</span>
+<span class="fc" id="L86">            g.fillRect(s.sX[0]*SCALE+4, s.sY[0]*SCALE+3, SCALE-6, SCALE-6); // отрисовка головы змея</span>
+        }
+
+        //отрисовка надписи счета на поле
+<span class="fc" id="L90">        g.setColor(Color.white);</span>
+<span class="fc" id="L91">        g.setFont(new Font(&quot;TimesRoman&quot;, Font.PLAIN, razmer/SCALE+5));</span>
+<span class="nc" id="L92">        g.drawString(&quot;SCORE:&quot;+ score,0,razmer);</span>
+
+        //Отрисовка надписи &quot;PAUSE&quot;
+<span class="nc bnc" id="L95" title="All 4 branches missed.">        if (!score_and_game_over &amp;&amp; !T ) { g.setColor(Color.white); g.setFont(new Font(&quot;TimesRoman&quot;, Font.PLAIN, 2*razmer/SCALE));</span>
+<span class="nc bnc" id="L96" title="All 2 branches missed.">            if(razmer/SCALE!=15)  g.drawString(&quot;PAUSE&quot;,razmer/2-(3*razmer/SCALE),razmer/3);</span>
+<span class="nc" id="L97">            else  g.drawString(&quot;PAUSE&quot;,razmer/2-(3*razmer/SCALE)-16,razmer/3);</span>
+        }
+<span class="nc" id="L99">    }</span>
+
+    /**
+     * main procedure
+     * @param args main parameter
+     */
+    //начало работы програмы
+    public static void main(String[] args)
+    {
+<span class="nc" id="L108">        Menu app = new Menu(); app.setVisible(true);</span>
+<span class="nc" id="L109">    }</span>
+
+    /*** eat an apple */
+    public static void eat_apple(Snake s, Apple a){
+        //едим яблоко
+<span class="pc bpc" id="L114" title="2 of 4 branches missed.">        if(s.sX[0]==a.posX &amp;&amp; s.sY[0]==a.posY) {</span>
+<span class="fc" id="L115">            a.setRandomPosition();</span>
+<span class="fc" id="L116">            s.len++;</span>
+<span class="fc" id="L117">            score = score + 25 - razmer / SCALE + col+speed/2;</span>
+<span class="pc bpc" id="L118" title="5 of 6 branches missed.">            if (col==0 &amp;&amp; s.len % 5 ==0 &amp;&amp; speed&lt;20) speed+=2;</span>
+        }
+<span class="fc" id="L120">    }</span>
+
+    /*** repaint the apple if it is situated in snake or barriers */
+    public static void object_in_object(Snake s, Apple a) {
+<span class="fc bfc" id="L124" title="All 2 branches covered.">        for (int l = 1; l &lt; s.len; l++) {</span>
+            // если яблоко в змейке
+<span class="pc bpc" id="L126" title="2 of 4 branches missed.">            if (s.sX[l] == a.posX &amp;&amp; s.sY[l] == a.posY) {</span>
+<span class="fc" id="L127">                a.setRandomPosition();</span>
+            }
+            //если яблоко в препятствии
+<span class="fc bfc" id="L130" title="All 2 branches covered.">            for (int i = 0; i &lt; col; i++) {</span>
+<span class="fc bfc" id="L131" title="All 4 branches covered.">                if (objx[i] == a.posX &amp;&amp; objy[i] == a.posY) {</span>
+<span class="fc" id="L132">                    a.setRandomPosition();</span>
+                }
+            }
+        }
+<span class="fc" id="L136">    }</span>
+
+
+    /***  draw the text after losing */
+    public void game_over_draw(){
+<span class="nc" id="L141">        Graphics g = this.getGraphics();</span>
+<span class="nc" id="L142">        g.setColor(Color.RED);</span>
+<span class="nc" id="L143">        g.setFont(new Font(&quot;TimesRoman&quot;, Font.PLAIN, 3*razmer/SCALE));</span>
+<span class="nc" id="L144">        g.drawString(game_over, razmer / 8, razmer / 2);</span>
+<span class="nc" id="L145">        g.setColor(Color.white);</span>
+<span class="nc" id="L146">        g.setFont(new Font(&quot;TimesRoman&quot;, Font.PLAIN, razmer/SCALE+5));</span>
+<span class="nc" id="L147">        g.drawString(&quot;YOUR FINAL SCORE:&quot;+score,razmer/4,razmer/2 + game_over.length() +  razmer/SCALE - 5);</span>
+<span class="nc" id="L148">        int n = JOptionPane.showConfirmDialog(null,&quot;You want to continue&quot;, &quot;Menu&quot;,JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);</span>
+<span class="nc bnc" id="L149" title="All 2 branches missed.">        if (n==1)</span>
+<span class="nc" id="L150">            System.exit(0);</span>
+<span class="nc" id="L151">    }</span>
+
+    /*** procedure run when game over*/
+    public static void game_over(Snake s, Apple a) {
+<span class="fc" id="L155">        T = false; //стопим змею</span>
+<span class="fc" id="L156">        s.len = 2;// start length</span>
+<span class="fc" id="L157">        a.setRandomPosition();//new candy</span>
+<span class="fc" id="L158">        s.sX[0] = (razmer / SCALE) / 2;</span>
+<span class="fc" id="L159">        s.sY[0] = (razmer / SCALE) / 2 - 1;</span>
+<span class="fc" id="L160">        s.sY[1] = (razmer / SCALE) / 2 - 1;</span>
+<span class="fc" id="L161">        s.sX[1] = (razmer / SCALE) / 2 - 1;//start position</span>
+<span class="fc" id="L162">        score=0;</span>
+<span class="fc" id="L163">        s.direction = 1;</span>
+<span class="fc" id="L164">        Menu.create_objects();</span>
+<span class="fc" id="L165">    }</span>
+
+
+
+    /***  verification to the game_over */
+    public void the_end(){
+<span class="nc" id="L171">        object_in_object(s,a);</span>
+<span class="nc bnc" id="L172" title="All 2 branches missed.">        for (int l=1; l&lt;s.len; l++){</span>
+
+<span class="nc bnc" id="L174" title="All 2 branches missed.">            for (int i=0; i&lt; Field.col;i++) {</span>
+<span class="nc bnc" id="L175" title="All 4 branches missed.">                if( (s.sX[0]==objx[i] &amp;&amp; s.sY[0]==objy[i]) ){</span>
+<span class="nc" id="L176">                    game_over_draw();</span>
+<span class="nc" id="L177">                    game_over(s,a);</span>
+                }
+            }
+<span class="nc bnc" id="L180" title="All 4 branches missed.">            if(s.sX[0]==s.sX[l] &amp;&amp; s.sY[0]==s.sY[l]) {</span>
+<span class="nc" id="L181">                game_over_draw();</span>
+<span class="nc" id="L182">                game_over(s,a);</span>
+            }
+        }
+<span class="nc" id="L185">    }</span>
+
+    /**
+     * procedure of all event on field
+     * @param e parameter of event
+     */
+    //основной алгоритм игры
+    @Override
+    public  void actionPerformed(ActionEvent e){
+<span class="nc bnc" id="L194" title="All 2 branches missed.">        if (T) s.move();</span>
+<span class="nc" id="L195">        eat_apple(s,a); the_end(); repaint();</span>
+<span class="nc" id="L196">    }</span>
+
+    /*** procedure that change direction of snake */
+    //подключение клавиш
+<span class="fc" id="L200">    public class KeyBoard extends KeyAdapter {</span>
+        public void keyPressed(KeyEvent event) {
+<span class="nc" id="L202">            int key = event.getKeyCode();</span>
+<span class="nc bnc" id="L203" title="All 2 branches missed.">            if (key == KeyEvent.VK_Q)</span>
+            {
+<span class="nc" id="L205">                jFrame.dispose(); score=0; speed=6; Menu app = new Menu(); app.setVisible(true);</span>
+            }
+<span class="nc bnc" id="L207" title="All 2 branches missed.">            if (key == KeyEvent.VK_ENTER ) {T=true;} //начало игры</span>
+<span class="nc bnc" id="L208" title="All 2 branches missed.">            if (key == KeyEvent.VK_ESCAPE) T=false;//пауза</span>
+<span class="nc bnc" id="L209" title="All 2 branches missed.">            if (T){</span>
+<span class="nc bnc" id="L210" title="All 6 branches missed.">                if ((key == KeyEvent.VK_UP || key == KeyEvent.VK_W) &amp;&amp; s.direction != 2) s.direction = 0;//UP</span>
+<span class="nc bnc" id="L211" title="All 6 branches missed.">                if ((key == KeyEvent.VK_RIGHT || key == KeyEvent.VK_D) &amp;&amp; s.direction != 3) s.direction = 1;//RIGHT</span>
+<span class="nc bnc" id="L212" title="All 6 branches missed.">                if ((key == KeyEvent.VK_DOWN || key == KeyEvent.VK_S) &amp;&amp; s.direction != 0) s.direction = 2;//DOWN</span>
+<span class="nc bnc" id="L213" title="All 6 branches missed.">                if ((key == KeyEvent.VK_LEFT || key == KeyEvent.VK_A) &amp;&amp; s.direction != 1) s.direction = 3;//LEFT</span>
+            }
+<span class="nc" id="L215">        }</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
