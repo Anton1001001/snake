@@ -1,7 +1,0 @@
-GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-Maven_coverage,default,Field,270,349,32,16,32,50,23,11,4,6
-Maven_coverage,default,Apple,0,34,0,0,0,7,0,2,0,2
-Maven_coverage,default,Field.KeyBoard,99,6,32,0,11,1,17,1,1,1
-Maven_coverage,default,Snake,32,136,6,12,0,24,6,6,0,3
-Maven_coverage,default,Menu.ButtonEvent,7,6,0,0,2,1,1,1,1,1
-Maven_coverage,default,Menu,18,376,12,32,0,73,12,15,0,5
